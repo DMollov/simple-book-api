@@ -1,4 +1,5 @@
 import Home from "./components/Home";
+import loginForm from "./components/loginForm";
 
 
 export default {
@@ -8,6 +9,10 @@ export default {
         {
             path: '/',
             component: Home
+        },
+        {
+            path: '/login',
+            component: loginForm,
         },
     ],
 }
