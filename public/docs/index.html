@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://vuebooks.test/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_c84ecb8d4fd02d9a637dac124b62c629 -->
+<h2>api/books</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://vuebooks.test/api/books" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://vuebooks.test/api/books"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "title": "Voluptatem numquam odit.",
+            "description": "Et voluptatem quia quas ex laudantium odit. Reprehenderit sit ratione nostrum. Id non repudiandae inventore aut vitae cumque.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 4,
+                "name": "Enoch Mertz",
+                "email": "aerdman@example.org"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Et cum ut.",
+            "description": "At et accusamus voluptatem cupiditate quia. Libero quisquam et necessitatibus id aut sit eum illo. Ratione illum ut eligendi quia eius qui veritatis rem.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 5,
+                "name": "Rudy Friesen",
+                "email": "lorenz81@example.net"
+            }
+        },
+        {
+            "id": 3,
+            "title": "Repudiandae et beatae quo.",
+            "description": "Modi consequatur ea omnis aut autem quas eos. Beatae nisi aut soluta animi. Illum mollitia aut ullam et.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 7,
+                "name": "Ariane Blanda",
+                "email": "jada70@example.com"
+            }
+        },
+        {
+            "id": 4,
+            "title": "Deserunt harum.",
+            "description": "Distinctio exercitationem itaque architecto accusantium. Quam nesciunt quia voluptatem accusantium voluptatibus odio. Quia aut voluptate exercitationem consequatur nam.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 9,
+                "name": "Lesley Kunze",
+                "email": "mcummerata@example.com"
+            }
+        },
+        {
+            "id": 5,
+            "title": "Ea dicta quia tempore.",
+            "description": "Odit ut ut quia molestiae sed fugiat blanditiis. Ut aperiam accusantium sit eos. Et tenetur aut ipsa unde quibusdam voluptas voluptatibus.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 10,
+                "name": "Fletcher Torphy",
+                "email": "bmiller@example.net"
+            }
+        },
+        {
+            "id": 6,
+            "title": "Nemo quibusdam eos.",
+            "description": "Animi ut consequuntur quis et. Enim culpa architecto odit impedit praesentium qui. Asperiores voluptate consequatur soluta suscipit a fugit officia unde.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 11,
+                "name": "Jordy Gaylord",
+                "email": "wgutmann@example.org"
+            }
+        },
+        {
+            "id": 7,
+            "title": "Sunt quas nostrum quo.",
+            "description": "Explicabo nesciunt esse minima ea facilis incidunt. Ea unde illum voluptatem et.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 13,
+                "name": "Kari Adams",
+                "email": "scasper@example.com"
+            }
+        },
+        {
+            "id": 8,
+            "title": "Veritatis dolorem architecto velit.",
+            "description": "Voluptatem id et voluptatum omnis. Aliquid vitae aut aliquam aliquam sequi. Cum occaecati mollitia et.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 15,
+                "name": "Dr. Salma DuBuque PhD",
+                "email": "ledner.yadira@example.net"
+            }
+        },
+        {
+            "id": 9,
+            "title": "Aperiam reiciendis distinctio.",
+            "description": "Amet unde dolor voluptatem. Blanditiis ea autem dignissimos exercitationem nobis. Sit esse eveniet voluptatem laboriosam fugit voluptatem. Eius minus sed amet beatae ut et.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 17,
+                "name": "Amber Johns",
+                "email": "gwen.schuppe@example.org"
+            }
+        },
+        {
+            "id": 10,
+            "title": "Aut maxime quidem corrupti.",
+            "description": "Corporis sunt sunt eum recusandae quam non. Provident optio nobis aut temporibus eum quas. Labore qui nulla sunt.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 19,
+                "name": "Shania Schamberger",
+                "email": "dwindler@example.org"
+            }
+        },
+        {
+            "id": 11,
+            "title": "Odio fuga a id.",
+            "description": "In accusantium omnis nam tenetur. Dignissimos ut cumque animi accusamus est accusantium iure facere. Tenetur doloribus voluptas ipsum quod et consequuntur laboriosam. Beatae nulla voluptatem omnis.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 20,
+                "name": "Mavis Beatty",
+                "email": "strosin.gabe@example.net"
+            }
+        },
+        {
+            "id": 12,
+            "title": "Quae aut non dolores.",
+            "description": "Iusto accusantium deserunt consequatur velit et sed. Omnis sed ex commodi ut et asperiores in.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 26,
+                "name": "Bernadine Krajcik I",
+                "email": "jayne75@example.com"
+            }
+        },
+        {
+            "id": 13,
+            "title": "Voluptatibus officia animi enim.",
+            "description": "Et facere recusandae facere harum aut dicta dolorem. Sint maiores pariatur in ea aut natus aut. Inventore doloremque rerum repudiandae sit ipsum.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 28,
+                "name": "Humberto Rath",
+                "email": "ernie.reilly@example.net"
+            }
+        },
+        {
+            "id": 14,
+            "title": "Voluptas culpa voluptatem atque.",
+            "description": "Enim fugit aut autem architecto. Consequatur magnam quae sunt sapiente. Voluptas ut voluptas accusantium odit.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 29,
+                "name": "Sydni Stracke",
+                "email": "scorkery@example.com"
+            }
+        },
+        {
+            "id": 15,
+            "title": "Iure molestias sed autem.",
+            "description": "Nihil blanditiis numquam quaerat perferendis laborum fuga et corporis. Et exercitationem qui ut odio laboriosam.",
+            "cover": null,
+            "published_at": "2020-09-23T06:35:09.000000Z",
+            "author": {
+                "id": 33,
+                "name": "Dr. Wilhelmine Conn IV",
+                "email": "zack.ledner@example.org"
+            }
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/books?page=1",
+        "last": "http:\/\/localhost\/api\/books?page=2",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/books?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 2,
+        "path": "http:\/\/localhost\/api\/books",
+        "per_page": 15,
+        "to": 15,
+        "total": 30
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/books</code></p>
+<!-- END_c84ecb8d4fd02d9a637dac124b62c629 -->
+<!-- START_33c6d64a451af167032c5c54df96db5c -->
+<h2>[Create a new book.]</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://vuebooks.test/api/books" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"title":"quia","description":"fuga","author_id":15,"cover":"sed"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://vuebooks.test/api/books"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "quia",
+    "description": "fuga",
+    "author_id": 15,
+    "cover": "sed"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/books</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>string</td>
+<td>required</td>
+<td>The name of the book.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>string</td>
+<td>required</td>
+<td>The description of the book.</td>
+</tr>
+<tr>
+<td><code>author_id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>The user which is adding the book.</td>
+</tr>
+<tr>
+<td><code>cover</code></td>
+<td>required</td>
+<td>optional</td>
+<td>Cover photo of the book.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_33c6d64a451af167032c5c54df96db5c -->
+<!-- START_57e3b4272508c324659e49ba5758c70f -->
+<h2>[Login - check if user credentials match those in our database.]</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://vuebooks.test/api/user/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"email":"quo","password":"ratione"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://vuebooks.test/api/user/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "quo",
+    "password": "ratione"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/user/login</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email</code></td>
+<td>required</td>
+<td>optional</td>
+<td>The email of the user.</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>required</td>
+<td>optional</td>
+<td>The password of the user.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_57e3b4272508c324659e49ba5758c70f -->
+<!-- START_638687f1aca2f1e69b360d1516c7c1f9 -->
+<h2>[Create a new user in the database.]</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://vuebooks.test/api/user/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"cumque","email":"ut","password":"voluptatem","is_author":"consequatur","notifications":"et"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://vuebooks.test/api/user/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "cumque",
+    "email": "ut",
+    "password": "voluptatem",
+    "is_author": "consequatur",
+    "notifications": "et"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/user/register</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>required</td>
+<td>optional</td>
+<td>The name of the user.</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>required</td>
+<td>optional</td>
+<td>The email of the user.</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>required</td>
+<td>optional</td>
+<td>The password of the user.</td>
+</tr>
+<tr>
+<td><code>is_author</code></td>
+<td>required</td>
+<td>optional</td>
+<td>Is the user an author?</td>
+</tr>
+<tr>
+<td><code>notifications</code></td>
+<td>required</td>
+<td>optional</td>
+<td>Enable notifications for the user?</td>
+</tr>
+</tbody>
+</table>
+<!-- END_638687f1aca2f1e69b360d1516c7c1f9 -->
+<!-- START_deecb59c6ed242669090efb3f1132015 -->
+<h2>[Returns a collection of authors.]</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://vuebooks.test/api/user/authors" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://vuebooks.test/api/user/authors"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": false,
+    "message": "Unauthenticated."
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/user/authors</code></p>
+<!-- END_deecb59c6ed242669090efb3f1132015 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
