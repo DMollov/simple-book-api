@@ -13,16 +13,26 @@ export default {
             component: Home
         },
         {
-          path: '/books',
-          component: Books
+            path: '/books',
+            component: Books,
+            meta: {
+                requiresAuth: true
+            }
         },
         {
             path: '/login',
             component: loginForm,
+            meta: {
+                onlyGuest: true
+            }
         },
         {
             path: '/register',
-            component: registerForm
+            component: registerForm,
+            meta: {
+                onlyGuest: true
+            }
         }
     ],
+    linkActiveClass: "border-b-2 border-teal-500"
 }
