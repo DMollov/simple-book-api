@@ -1,5 +1,6 @@
 import Home from "./components/Home";
 import loginForm from "./components/loginForm";
+import registerForm from "./components/registerForm";
 
 
 export default {
@@ -14,5 +15,9 @@ export default {
             path: '/login',
             component: loginForm,
         },
+        {
+            path: '/register',
+            component: registerForm
+        }
     ],
 }

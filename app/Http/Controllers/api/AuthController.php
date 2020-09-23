@@ -39,4 +39,45 @@ class AuthController extends Controller
             'access_token' => $accessToken
         ]);
     }
+
+    /**
+     * [Create a new user in the database.]
+     * @bodyParam  name required The name of the user.
+     * @bodyParam  email required The email of the user.
+     * @bodyParam  password required The password of the user.
+     * @bodyParam  is_author required Is the user an author?
+     * @bodyParam  notifications required Enable notifications for the user?
+     */
+
+    public function register(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|string|max:255|unique:users',
+            'password' => 'required|string|min:8|max:255|confirmed',
+            'is_author' => 'required|boolean',
+            'notifications' => 'required|boolean',
+        ]);
+
+        if($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'is_author' => $request->is_author,
+            'notifications' => $request->notifications,
+        ]);
+
+
+        $accessToken = $user->createToken('authToken')->accessToken;
+
+        return response()->json([
+            'user' => $user,
+            'access_token' => $accessToken
+        ]);
+    }
+
 }

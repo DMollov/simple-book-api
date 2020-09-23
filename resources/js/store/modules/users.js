@@ -16,6 +16,23 @@ const actions = {
         }).catch(error => {
             commit('SET_ERRORS', error.response.data.errors)
         })
+    },
+    register({commit}, user) {
+        axios.post('/api/user/register', {
+            name: user.name,
+            email: user.email,
+            password: user.password,
+            password_confirmation: user.password_confirmation,
+            is_author: user.is_author,
+            notifications: user.notifications,
+        }).then(response => {
+            if (response.data.access_token) {
+                localStorage.setItem('accessToken', response.data.access_token)
+                window.location.replace('/')
+            }
+        }).catch(error => {
+            commit('SET_ERRORS', error.response.data.errors)
+        })
     }
 };
 const mutations = {
