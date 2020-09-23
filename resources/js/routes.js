@@ -2,6 +2,7 @@ import Home from "./components/Home";
 import loginForm from "./components/loginForm";
 import registerForm from "./components/registerForm";
 import Books from "./components/Books";
+import Dashboard from "./components/Dashboard";
 
 
 export default {
@@ -11,6 +12,13 @@ export default {
         {
             path: '/',
             component: Home
+        },
+        {
+          path: '/dashboard',
+          component: Dashboard,
+          meta: {
+              requiresAuth: true
+          }
         },
         {
             path: '/books',

@@ -5,6 +5,11 @@ const state = {
 };
 const getters = {};
 const actions = {
+    getUser({commit}) {
+        axios.get("/api/user/current").then(response => {
+            commit('SET_USER', response.data);
+        });
+    },
     getAuthors({commit}) {
         axios.get('/api/user/authors').then(response => {
             commit('SET_AUTHORS', response.data);
