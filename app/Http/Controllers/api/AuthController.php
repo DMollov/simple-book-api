@@ -80,4 +80,15 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * [Returns a collection of authors.]
+     */
+
+    public function authors()
+    {
+        $users = User::where('is_author', '1')->select('id', 'name')->get();
+
+        return $users;
+    }
+
 }

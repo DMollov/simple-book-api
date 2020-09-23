@@ -1,6 +1,7 @@
 import Home from "./components/Home";
 import loginForm from "./components/loginForm";
 import registerForm from "./components/registerForm";
+import Books from "./components/Books";
 
 
 export default {
@@ -10,6 +11,10 @@ export default {
         {
             path: '/',
             component: Home
+        },
+        {
+          path: '/books',
+          component: Books
         },
         {
             path: '/login',

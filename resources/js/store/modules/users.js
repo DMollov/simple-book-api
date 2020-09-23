@@ -1,9 +1,15 @@
 const state = {
     user: {},
+    authors: {},
     formErrors: null
 };
 const getters = {};
 const actions = {
+    getAuthors({commit}) {
+        axios.get('/api/user/authors').then(response => {
+            commit('SET_AUTHORS', response.data);
+        });
+    },
     loginUser({commit}, user) {
         axios.post("/api/user/login", {
             email: user.email,
@@ -38,6 +44,9 @@ const actions = {
 const mutations = {
     SET_USER(state, data) {
         state.user = data;
+    },
+    SET_AUTHORS(state, data) {
+        state.authors = data;
     },
     SET_ERRORS(state, data) {
         state.formErrors = data;
