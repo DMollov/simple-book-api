@@ -48,6 +48,9 @@ class BookController extends Controller
             'cover' => $coverPath,
         ]);
 
+        $subscribers = User::where([['is_author', '=', '0'], ['notifications', '=', '1']])->get();
+        Notification::send($subscribers, new NewBook($book));
+
         return $book;
     }
 }
